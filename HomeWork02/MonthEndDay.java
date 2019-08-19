@@ -1,10 +1,35 @@
 package HomeWork02;
+import java.util.Scanner;
 
 public class MonthEndDay {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Scanner scanner = new Scanner (System.in);
+		
+		System.out.println("월을 입력하면 해당 월이 몇 일인지 알려주는 프로그램입니다.");
+		System.out.println("알고싶은 월을 입력하세요.[해달월의 숫자만 입력]");
+		int mon = scanner.nextInt();
+		
+		int eval = 0 ;
+		switch(mon) {
+		case 1 : eval = 31; break;
+		case 2 : eval = 29; break;
+		case 3 : eval = 31; break;
+		case 4 : eval = 30; break;
+		case 5 : eval = 31; break;
+		case 6 : eval = 30; break;
+		case 7 : eval = 31; break;
+		case 8 : eval = 31; break;
+		case 9 : eval = 30; break;
+		case 10 : eval = 31; break;
+		case 11 : eval = 30; break;
+		case 12 : eval = 31; break;
+		default : System.out.println("Error");break;
+		}
+		
+		System.out.printf("%d월은 %d일까지 입니다.",mon,eval);
+		
 	}
 
 }
